@@ -14,7 +14,9 @@ export async function POST(request: Request) {
   const { image } = await request.json()
 
   if (!image) {
-    return NextResponse.json("No image provided", { status: 400, })
+    return NextResponse.json("No image provided", {
+      status: 400,
+    })
   }
 
   try {
